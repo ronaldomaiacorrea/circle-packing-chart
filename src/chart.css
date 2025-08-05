@@ -1,0 +1,286 @@
+/* Circle Packing Chart Styles */
+.tooltip-content {
+  padding: 8px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.4;
+}
+
+.tooltip-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.tooltip-value {
+  font-size: 13px;
+  color: #e0e0e0;
+  margin-bottom: 2px;
+}
+
+.tooltip-type {
+  font-size: 11px;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.tooltip-info {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.tooltip-parent {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Chart container */
+.circle-pack-chart {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Node hover effects */
+.node--hover {
+  cursor: pointer;
+}
+
+.node--hover circle {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+/* Text styling for different node types */
+.node-text {
+  pointer-events: none;
+  text-anchor: middle;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.node-text--subfield {
+  font-weight: 600;
+  fill: #333;
+}
+
+.node-text--topic {
+  font-weight: 400;
+  fill: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation styles */
+.circle-pack-chart .echarts-circle {
+  transition: all 0.3s ease;
+}
+
+.circle-pack-chart .echarts-circle:hover {
+  filter: brightness(1.1);
+}
+
+/* App Styles */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+.controls-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.controls-section h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.controls-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group label {
+  font-weight: 500;
+  color: #555;
+  min-width: 50px;
+}
+
+.control-group input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 80px;
+}
+
+.control-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.control-group span {
+  color: #666;
+  font-size: 14px;
+}
+
+.chart-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.chart-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.data-info {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.data-info h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+.instructions {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+}
+
+.instructions h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.instructions strong {
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .app-header h1 {
+    font-size: 1.8em;
+  }
+
+  .controls-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    overflow-x: auto;
+  }
+}
