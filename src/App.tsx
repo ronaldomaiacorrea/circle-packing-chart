@@ -1,15 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
-import Chart from './Chart';
+import { Chart } from './Chart';
 import { sampleData } from './data';
-import { transformDataToHierarchy } from './utils';
 
 function App() {
   const [dimensions, setDimensions] = useState({
     width: 900,
     height: 700
   });
-  const chartData = useMemo(() => transformDataToHierarchy(sampleData), []);
 
   const handleDimensionChange = (dimension: 'width' | 'height', value: number) => {
     setDimensions(prev => ({
@@ -60,37 +58,11 @@ function App() {
         <h3>Research Topics by Subfield</h3>
         <div className="chart-container">
           <Chart
-            data={chartData}
-            width={dimensions.width}
-            height={dimensions.height}
+            data={sampleData}
           />
         </div>
       </div>
 
-      <div className="data-info">
-        <h3>Data Overview</h3>
-        <div className="stats-grid">
-          <div className="stat-item">
-            <span className="stat-label">Total Topics: </span>
-            <span className="stat-value">{chartData.length}</span>
-          </div>
-          <div className="stat-item">
-            <span className="stat-label">Subfields: </span>
-            <span className="stat-value">{new Set(chartData.map(d => d.subfieldId)).size}</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="instructions">
-        <h3>How to Use</h3>
-        <ul>
-          <li><strong>Hover</strong> over circles to see detailed information</li>
-          <li><strong>Larger circles</strong> represent topics with more works</li>
-          <li><strong>Colors</strong> distinguish different subfields</li>
-          <li><strong>Nested structure</strong> shows hierarchy: subfields contain topics</li>
-          <li><strong>Adjust dimensions</strong> using the controls above</li>
-        </ul>
-      </div>
     </div>
   );
 }
